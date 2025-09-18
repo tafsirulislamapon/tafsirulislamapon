@@ -21,12 +21,13 @@ I enjoy working with **modern web & mobile technologies**, experimenting with **
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" width="40" height="40" />
+  <img src="./assets/logos/Nest.png" alt="Expo" width="40" height="40" />
   <img src="./assets/logos/Expo.png" alt="Expo" width="40" height="40" />
 </p>
 
 <p align="center">
   <!-- Row 2: Styling, UI & Tools -->
-  <img src="./assets/logos/tailwind.svg" alt="Tailwind CSS" width="40" height="40" />
+  <img src="./assets/logos/Tailwind.png" alt="Tailwind CSS" width="40" height="40" />
   <img src="./assets/logos/GSAP.png" alt="GSAP" width="40" height="40" />
   <img src="./assets/logos/NativeWind.jpg" alt="NativeWind" width="40" height="40" />
   <img src="./assets/logos/ShadCn.png" alt="ShadCN UI" width="40" height="40" />
