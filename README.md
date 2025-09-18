@@ -15,23 +15,21 @@ I enjoy working with **modern web & mobile technologies**, experimenting with **
 ## Tech Stack
 
 <p align="center">
-  <!-- Frontend & Mobile -->
+  <!-- Row 1: Frontend & Mobile -->
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40" /> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40" /> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40" /> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" width="40" height="40" /> 
-<!--   <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Expo_logo.png" alt="Expo" width="40" height="40" /> -->
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" width="40" height="40" />
+  <img src="./assets/logos/Expo.png" alt="Expo" width="40" height="40" />
 </p>
 
 <p align="center">
-  <!-- Styling & UI -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg" alt="Supabase" width="40" height="40" />
-</p>
-
-<p align="center">
-  <!-- Tools -->
+  <!-- Row 2: Styling, UI & Tools -->
+  <img src="./assets/logos/tailwind.svg" alt="Tailwind CSS" width="40" height="40" />
+  <img src="./assets/logos/GSAP.png" alt="GSAP" width="40" height="40" />
+  <img src="./assets/logos/NativeWind.jpg" alt="NativeWind" width="40" height="40" />
+  <img src="./assets/logos/ShadCn.png" alt="ShadCN UI" width="40" height="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" width="40" height="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" width="40" height="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" width="40" height="40" />
