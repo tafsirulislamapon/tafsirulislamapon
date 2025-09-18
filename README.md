@@ -2,39 +2,33 @@
   <img src="https://i.imgur.com/cRvdO2b.png" alt="Md. Tafsirul Islam Banner" width="100%" />
 </p>
 
-<h3 align="center">Turning ideas into seamless web & mobile experiences. Passionate about learning, building, and exploring new technologies every day.</h3>
+<h3 align="center">Building seamless web & mobile experiences. Always learning, experimenting, and creating every day.</h3>
 
 ---
 
 ## About Me
-I’m a **passionate developer** who loves **creating interactive, clean, and scalable apps**.  
-I enjoy working with **modern web & mobile technologies**, experimenting with **AI features**, and constantly **learning new tools and frameworks**.
+I’m a **passionate developer** focused on **interactive, clean, and scalable apps**.  
+I enjoy exploring **modern web & mobile technologies**, experimenting with **AI features**, and **learning new tools every day**.
 
 ---
 
 ## Tech Stack
-
 <p align="center">
-  <!-- Row 1: Frontend & Mobile -->
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" width="40" height="40" />
-  <img src="./assets/logos/Nest.png" alt="Expo" width="40" height="40" />
-  <img src="./assets/logos/Expo.png" alt="Expo" width="40" height="40" />
-</p>
-
-<p align="center">
-  <!-- Row 2: Styling, UI & Tools -->
-  <img src="./assets/logos/Tailwind.png" alt="Tailwind CSS" width="40" height="40" />
-  <img src="./assets/logos/GSAP.png" alt="GSAP" width="40" height="40" />
-  <img src="./assets/logos/NativeWind.jpg" alt="NativeWind" width="40" height="40" />
-  <img src="./assets/logos/ShadCn.png" alt="ShadCN UI" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" width="40" height="40" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg" alt="Vercel" width="40" height="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" width="40" />
+  <img src="./assets/logos/Expo.png" alt="Expo" width="40" />
+  <img src="./assets/logos/Nest.png" alt="NestJS" width="40" />
+  <img src="./assets/logos/Tailwind.png" alt="Tailwind CSS" width="40" />
+  <img src="./assets/logos/GSAP.png" alt="GSAP" width="40" />
+  <img src="./assets/logos/NativeWind.jpg" alt="NativeWind" width="40" />
+  <img src="./assets/logos/ShadCn.png" alt="ShadCN UI" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg" alt="Vercel" width="40" />
 </p>
 
 ---
