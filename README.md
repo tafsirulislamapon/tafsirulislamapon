@@ -1,0 +1,12 @@
+<img src="./assets/profile.svg" width="100%" alt="Md. Tafsirul Islam. Automation Engineer, Software Engineer, Systems Designer & Analyst. Currently learning game development. About: I'm Tafsir, an automation engineer and software developer. I design and build the systems businesses run on: CRM pipelines, integrations and automated workflows, along with the web and mobile software around them. I approach every project as a systems designer and analyst, starting with the process and the data before writing any code. Skills. Automation Engineering: GoHighLevel, Zapier, workflow automation, webhooks, REST API integrations, OAuth 2.0, CRM pipelines, SMS and A2P compliance, AI and LLM integrations, Postman. Systems Design and Analysis: system architecture, requirements analysis, data modeling, process mapping, integration design, API design, security reviews, performance and scale. Software Engineering: TypeScript, JavaScript, Python, Java, C, C++, C#, HTML and CSS, React, Next.js, Tailwind CSS, shadcn/ui, GSAP, React Native, Expo, NativeWind, Node.js, NestJS, Express, Supabase, PostgreSQL, Drizzle ORM, Stripe, Clerk, Vercel, Git and GitHub. Game Development, currently learning: game loops, physics and collisions, gameplay systems, level design. Selected work: RAX, an operations dashboard for GoHighLevel sub-accounts (Next.js, TypeScript, Supabase, Drizzle); ReferIn, a referral marketplace (Next.js, Supabase, Clerk, Stripe); Risus, a social app with AI reposts and tokens (React Native, Expo); VectorX, SaaS data visualization (Next.js, Supabase); Natgrove, an eco-awareness reward app (Expo, Supabase); Coffee App, a coffee ordering app (React Native, Tailwind).">
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/tafsirul-islam">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/tafsirulislamapon?tab=repositories">Repositories</a>
+</p>
+
+<p align="center">
+  <img alt="Contribution streak" height="170" src="https://streak-stats.demolab.com?user=tafsirulislamapon&disable_animations=true&border_radius=16&background=F8F9FB&border=E3E8F0&stroke=E3E8F0&ring=2F5FA7&fire=2F5FA7&currStreakNum=14233C&sideNums=14233C&currStreakLabel=2F5FA7&sideLabels=475467&dates=667085">
+  <img alt="Most used languages" height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tafsirulislamapon&disable_animations=true&layout=compact&langs_count=6&border_radius=16&bg_color=F8F9FB&border_color=E3E8F0&title_color=14233C&text_color=475467">
+</p>

@@ -1,0 +1,12 @@
+{
+  "name": "profile-graphics",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs ../../assets"
+  },
+  "dependencies": {
+    "opentype.js": "^1.3.4",
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}
