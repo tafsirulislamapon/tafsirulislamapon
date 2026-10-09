@@ -17,9 +17,9 @@ const NAME = "Md. Tafsirul Islam";
 const ROLES = ["Automation Engineer", "Software Engineer", "Systems Designer & Analyst"];
 // Links live in their own section as separate, clickable cards: text inside an <img> SVG can never be a link on GitHub.
 const LINKS = [
-  { title: "GitHub", sub: "github.com/tafsirulislamapon", file: "link-github" },
-  { title: "LinkedIn", sub: "linkedin.com/in/tafsirul-islam", file: "link-linkedin" },
-  { title: "Repositories", sub: "github.com/tafsirulislamapon?tab=repositories", file: "link-repositories" },
+  { title: "GitHub", sub: "@tafsirulislamapon", file: "link-github", href: "https://github.com/tafsirulislamapon" },
+  { title: "LinkedIn", sub: "in/tafsirul-islam", file: "link-linkedin", href: "https://www.linkedin.com/in/tafsirul-islam" },
+  { title: "Repositories", sub: "All public work", file: "link-repositories", href: "https://github.com/tafsirulislamapon?tab=repositories" },
 ];
 const NOW = "Currently learning game development";
 const ABOUT = [
@@ -281,43 +281,49 @@ ${body}
 </svg>`;
 }
 
-// ---------- links section: one small SVG per link, wrapped in a real <a> in the README ----------
-// Each card carries its own off-white panel, so it stays legible in GitHub's light and dark themes.
-const panel = (w, h, body) =>
-  `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(body.label)}">
-<title>${esc(body.label)}</title>
-<rect x="1" y="1" width="${w - 2}" height="${h - 2}" rx="20" fill="${C.page}" stroke="${C.border}" stroke-width="2"/>
-${body.svg}
-</svg>`;
+// ---------- links section: one SVG per link, wrapped in a real <a> in the README ----------
+// GitHub serves README images through its camo proxy as plain <img>, so text inside an SVG can never be a
+// link: each destination needs its own image. All three share one box size and are shown at 33.33% width,
+// so they tile the full column width as an even three-up grid. The gutters are transparent padding inside
+// the box (outer edges flush with the page card above), and each card paints its own off-white panel so it
+// stays legible in GitHub's dark theme.
+const CARD = { w: 420, h: 168, gut: 20, pad: 36 };
 
-// Full-width strip so the section header lines up with the page card above it.
-function linksHeading() {
-  const w = 1200, h = 148, L = 88;
-  const t = text("Links", { f: F.medium, size: 32, x: L, y: 110, fill: C.ink, ls: -0.4 });
-  const svg = `<rect x="${L}" y="48" width="56" height="5" rx="2.5" fill="${C.accent}"/>${t.svg}<line x1="${L}" y1="134" x2="${w - L}" y2="134" stroke="${C.rule}" stroke-width="2"/>`;
+// Section header: plain type on a transparent ground, in light and dark variants that the README swaps with
+// <picture media="(prefers-color-scheme: dark)">, so it sits on GitHub's own page colour either way.
+function linksHeading(dark) {
+  const w = 1200, h = 100, x = 2; // flush with the card row and the page card above
+  const ink = dark ? "#E6EDF3" : C.ink;
+  const rule = dark ? "#30363D" : C.rule;
+  const t = text("Links", { f: F.medium, size: 34, x, y: 54, fill: ink, ls: -0.5 });
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Links">
 <title>Links</title>
-<rect x="1" y="1" width="${w - 2}" height="${h + 26}" rx="28" fill="${C.page}" stroke="${C.border}" stroke-width="2"/>
-${svg}
+${t.svg}<line x1="${x}" y1="84" x2="${w - x}" y2="84" stroke="${rule}" stroke-width="2"/>
 </svg>`;
 }
 
-function linkCard({ title, sub }) {
-  const tt = text(title, { f: F.medium, size: 24, x: 30, y: 70, fill: C.ink, ls: -0.3 });
-  const st = text(sub, { f: F.regular, size: 16, x: 30, y: 98, fill: C.muted });
-  const w = Math.ceil(Math.max(tt.w, st.w)) + 60 + 44, h = 128;
-  const ax = w - 30 - 20;
-  const arrow = `<g stroke="${C.accent}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="${ax}" y1="68" x2="${ax + 18}" y2="68"/><polyline points="${ax + 11},61 ${ax + 18},68 ${ax + 11},75"/></g>`;
-  return panel(w, h, {
-    label: `${title}: ${sub}`,
-    svg: `<rect x="30" y="28" width="30" height="3" rx="1.5" fill="${C.accent}"/>${tt.svg}${st.svg}${arrow}`,
-  });
+function linkCard({ title, sub }, i, n) {
+  const { w, h, gut, pad } = CARD;
+  const l = i === 0 ? 0 : gut / 2;
+  const r = i === n - 1 ? 0 : gut / 2;
+  const x = l + pad;
+  const tt = text(title, { f: F.medium, size: 26, x, y: 86, fill: C.ink, ls: -0.4 });
+  const st = text(sub, { f: F.regular, size: 16, x, y: 118, fill: C.muted });
+  const ax = w - r - pad - 20;
+  const arrow = `<g stroke="${C.muted}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="${ax}" y1="79" x2="${ax + 18}" y2="79"/><polyline points="${ax + 11},72 ${ax + 18},79 ${ax + 11},86"/></g>`;
+  const label = `${title} — ${sub}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">
+<title>${esc(label)}</title>
+<rect x="${l + 1}" y="1" width="${w - l - r - 2}" height="${h - 2}" rx="24" fill="${C.page}" stroke="${C.border}" stroke-width="2"/>
+${tt.svg}${st.svg}${arrow}
+</svg>`;
 }
 
 mkdirSync(`${OUT}/png`, { recursive: true });
 const svg = page();
 writeFileSync(`${OUT}/profile.svg`, svg);
 writeFileSync(`${OUT}/png/profile.png`, new Resvg(svg, { fitTo: { mode: "width", value: 2400 } }).render().asPng());
-writeFileSync(`${OUT}/links-heading.svg`, linksHeading());
-for (const l of LINKS) writeFileSync(`${OUT}/${l.file}.svg`, linkCard(l));
+writeFileSync(`${OUT}/links-heading.svg`, linksHeading(false));
+writeFileSync(`${OUT}/links-heading-dark.svg`, linksHeading(true));
+LINKS.forEach((l, i) => writeFileSync(`${OUT}/${l.file}.svg`, linkCard(l, i, LINKS.length)));
 console.log("built");

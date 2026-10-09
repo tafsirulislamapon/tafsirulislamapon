@@ -1,10 +1,12 @@
 <img src="./assets/profile.svg" width="100%" alt="Md. Tafsirul Islam. Automation Engineer, Software Engineer, Systems Designer & Analyst. Currently learning game development. About: I'm Tafsir, an automation engineer and software developer. I design and build the systems businesses run on: CRM pipelines, integrations and automated workflows, along with the web and mobile software around them. I approach every project as a systems designer and analyst, starting with the process and the data before writing any code. Skills. Automation Engineering: GoHighLevel, Zapier, workflow automation, webhooks, REST API integrations, OAuth 2.0, CRM pipelines, SMS and A2P compliance, AI and LLM integrations, Postman. Systems Design and Analysis: system architecture, requirements analysis, data modeling, process mapping, integration design, API design, security reviews, performance and scale. Software Engineering: TypeScript, JavaScript, Python, Java, C, C++, C#, HTML and CSS, React, Next.js, Tailwind CSS, shadcn/ui, GSAP, React Native, Expo, NativeWind, Node.js, NestJS, Express, Supabase, PostgreSQL, Drizzle ORM, Stripe, Clerk, Vercel, Git and GitHub. Game Development, currently learning: game loops, physics and collisions, gameplay systems, level design. Selected work: RAX, an operations dashboard for GoHighLevel sub-accounts (Next.js, TypeScript, Supabase, Drizzle); ReferIn, a referral marketplace (Next.js, Supabase, Clerk, Stripe); Risus, a social app with AI reposts and tokens (React Native, Expo); VectorX, SaaS data visualization (Next.js, Supabase); Natgrove, an eco-awareness reward app (Expo, Supabase); Coffee App, a coffee ordering app (React Native, Tailwind).">
 
-<img src="./assets/links-heading.svg" width="100%" alt="Links">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/links-heading-dark.svg">
+  <img src="./assets/links-heading.svg" width="100%" alt="Links">
+</picture>
 
-<a href="https://github.com/tafsirulislamapon"><img height="64" src="./assets/link-github.svg" alt="GitHub: github.com/tafsirulislamapon"></a>
-<a href="https://www.linkedin.com/in/tafsirul-islam"><img height="64" src="./assets/link-linkedin.svg" alt="LinkedIn: linkedin.com/in/tafsirul-islam"></a>
-<a href="https://github.com/tafsirulislamapon?tab=repositories"><img height="64" src="./assets/link-repositories.svg" alt="Repositories: github.com/tafsirulislamapon?tab=repositories"></a>
+<!-- Thirds with no whitespace between the anchors, so the three cards tile the full width. -->
+<a href="https://github.com/tafsirulislamapon"><img width="33.33%" src="./assets/link-github.svg" alt="GitHub — @tafsirulislamapon"></a><a href="https://www.linkedin.com/in/tafsirul-islam"><img width="33.33%" src="./assets/link-linkedin.svg" alt="LinkedIn — in/tafsirul-islam"></a><a href="https://github.com/tafsirulislamapon?tab=repositories"><img width="33.33%" src="./assets/link-repositories.svg" alt="Repositories — all public work"></a>
 
 <p>
   <img alt="Contribution streak" height="170" src="https://streak-stats.demolab.com?user=tafsirulislamapon&disable_animations=true&border_radius=16&background=F8F9FB&border=E3E8F0&stroke=E3E8F0&ring=2F5FA7&fire=2F5FA7&currStreakNum=14233C&sideNums=14233C&currStreakLabel=2F5FA7&sideLabels=475467&dates=667085">
