@@ -15,7 +15,12 @@ const F = { regular: font(400), medium: font(500) };
 // ---------- content ----------
 const NAME = "Md. Tafsirul Islam";
 const ROLES = ["Automation Engineer", "Software Engineer", "Systems Designer & Analyst"];
-const LINKS = ["github.com/tafsirulislamapon", "linkedin.com/in/tafsirul-islam"];
+// Links live in their own section as separate, clickable cards: text inside an <img> SVG can never be a link on GitHub.
+const LINKS = [
+  { title: "GitHub", sub: "github.com/tafsirulislamapon", file: "link-github" },
+  { title: "LinkedIn", sub: "linkedin.com/in/tafsirul-islam", file: "link-linkedin" },
+  { title: "Repositories", sub: "github.com/tafsirulislamapon?tab=repositories", file: "link-repositories" },
+];
 const NOW = "Currently learning game development";
 const ABOUT = [
   [{ s: "I'm " }, { s: "Tafsir", strong: true }, { s: ", an automation engineer and software developer." }],
@@ -165,9 +170,8 @@ function page() {
   const sep = { s: "   /   ", f: F.regular, size: 28, fill: C.sep };
   body += runs(ROLES.flatMap((r, i) => [...(i ? [sep] : []), { s: r, f: F.regular, size: 28, fill: C.text }]), L, 250).svg;
   body += `<line x1="${L}" y1="294" x2="${R}" y2="294" stroke="${C.rule}" stroke-width="2"/>`;
-  body += runs(LINKS.flatMap((l, i) => [...(i ? [{ s: "     ·     ", f: F.regular, size: 20, fill: C.sep }] : []), { s: l, f: F.regular, size: 20, fill: C.muted }]), L, 336).svg;
-  const now = text(NOW, { f: F.regular, size: 20, x: R, y: 336, fill: C.muted, anchor: "end" });
-  body += `<circle cx="${R - now.w - 15}" cy="329" r="4.5" fill="${C.accent}"/>` + now.svg;
+  const now = text(NOW, { f: F.regular, size: 20, x: L + 19, y: 336, fill: C.muted });
+  body += `<circle cx="${L + 4.5}" cy="329" r="4.5" fill="${C.accent}"/>` + now.svg;
   y = 336;
 
   const section = (title) => {
@@ -277,8 +281,43 @@ ${body}
 </svg>`;
 }
 
+// ---------- links section: one small SVG per link, wrapped in a real <a> in the README ----------
+// Each card carries its own off-white panel, so it stays legible in GitHub's light and dark themes.
+const panel = (w, h, body) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(body.label)}">
+<title>${esc(body.label)}</title>
+<rect x="1" y="1" width="${w - 2}" height="${h - 2}" rx="20" fill="${C.page}" stroke="${C.border}" stroke-width="2"/>
+${body.svg}
+</svg>`;
+
+// Full-width strip so the section header lines up with the page card above it.
+function linksHeading() {
+  const w = 1200, h = 148, L = 88;
+  const t = text("Links", { f: F.medium, size: 32, x: L, y: 110, fill: C.ink, ls: -0.4 });
+  const svg = `<rect x="${L}" y="48" width="56" height="5" rx="2.5" fill="${C.accent}"/>${t.svg}<line x1="${L}" y1="134" x2="${w - L}" y2="134" stroke="${C.rule}" stroke-width="2"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Links">
+<title>Links</title>
+<rect x="1" y="1" width="${w - 2}" height="${h + 26}" rx="28" fill="${C.page}" stroke="${C.border}" stroke-width="2"/>
+${svg}
+</svg>`;
+}
+
+function linkCard({ title, sub }) {
+  const tt = text(title, { f: F.medium, size: 24, x: 30, y: 70, fill: C.ink, ls: -0.3 });
+  const st = text(sub, { f: F.regular, size: 16, x: 30, y: 98, fill: C.muted });
+  const w = Math.ceil(Math.max(tt.w, st.w)) + 60 + 44, h = 128;
+  const ax = w - 30 - 20;
+  const arrow = `<g stroke="${C.accent}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="${ax}" y1="68" x2="${ax + 18}" y2="68"/><polyline points="${ax + 11},61 ${ax + 18},68 ${ax + 11},75"/></g>`;
+  return panel(w, h, {
+    label: `${title}: ${sub}`,
+    svg: `<rect x="30" y="28" width="30" height="3" rx="1.5" fill="${C.accent}"/>${tt.svg}${st.svg}${arrow}`,
+  });
+}
+
 mkdirSync(`${OUT}/png`, { recursive: true });
 const svg = page();
 writeFileSync(`${OUT}/profile.svg`, svg);
 writeFileSync(`${OUT}/png/profile.png`, new Resvg(svg, { fitTo: { mode: "width", value: 2400 } }).render().asPng());
+writeFileSync(`${OUT}/links-heading.svg`, linksHeading());
+for (const l of LINKS) writeFileSync(`${OUT}/${l.file}.svg`, linkCard(l));
 console.log("built");
